@@ -1,2 +1,3 @@
 SLACKTEAM: stratiopaas
 BUILDTOOL: make
+CROSSBUILD: agent-DCOS
