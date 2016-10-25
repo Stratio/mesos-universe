@@ -1,3 +1,7 @@
+change-version:
+	echo "Modifying version to: $(version)"
+	echo $(version) > VERSION
+
 compile:
 	cd scripts && ./build.sh
 
