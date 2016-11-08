@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (upcoming)
+## 0.1.0 (November 08, 2016)
 
 * marathon-lb
 * exhibitor
