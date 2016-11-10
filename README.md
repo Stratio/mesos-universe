@@ -205,10 +205,10 @@ for more detailed instruction on app definitions.
 |2.0|optional|
 |3.0|optional **[Deprecated]**|
 
-As of `packagingVersion` `3.0`, `command.json` is deprecated in favor of the `.cli` property of `resources.json`.
+As of `packagingVersion` `3.0`, `command.json` is deprecated in favor of the `.cli` property of `resource.json`.
 See [CLI Resources](#cli-resources) for details.
 
-Describes how to install the package's package's CLI via pip, the Python package manager. This document represents the
+Describes how to install the package's CLI via pip, the Python package manager. This document represents the
 format of a Pip requirements file where each element in the array is a line in the requirements file.
 
 ```json
