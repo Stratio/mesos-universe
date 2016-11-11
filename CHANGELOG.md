@@ -2,9 +2,9 @@
 
 ## 0.2.0 (upcoming)
 
-* Pending changelog
+* elasticsearch
 
-## 0.1.0 (upcoming)
+## 0.1.0 (November 08, 2016)
 
 * marathon-lb
 * exhibitor
