@@ -105,7 +105,7 @@ def _validate_revision(given_package, revision, path):
                  '1.8.')
 
 def _validate_json(path, schema):
-        with open(path) as f:
+        with open(path, encoding='utf_8') as f:
             data = json.loads(f.read())
 
         _validate_jsonschema(data, schema)

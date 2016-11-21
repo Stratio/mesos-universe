@@ -2,7 +2,7 @@
 
 hose {
     EMAIL = 'qa'
-    MODULE = 'paasmu'
+    MODULE = 'mesos-universe'
     REPOSITORY = 'mesos-universe'
     SLACKTEAM = 'stratiopaas'
     BUILDTOOL = 'make'
