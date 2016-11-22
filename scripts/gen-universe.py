@@ -177,7 +177,7 @@ def read_package(path):
 
     path = path / 'package.json'
 
-    with path.open() as file_object:
+    with path.open(encoding='utf-8') as file_object:
         return json.load(file_object)
 
 
