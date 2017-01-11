@@ -4,7 +4,7 @@
 
 * Pending changelog
 
-## 0.2.0 (upcoming)
+## 0.2.0 (January 11, 2017)
 
 * elasticsearch
 
