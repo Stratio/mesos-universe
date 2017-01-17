@@ -16,7 +16,7 @@ def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 def _get_json_schema(file_name):
-    with open(os.path.join(SCHEMA_DIR, file_name)) as f:
+    with open(os.path.join(SCHEMA_DIR, file_name), encoding='utf-8') as f:
         return json.loads(f.read())
 
 PACKAGE_JSON_SCHEMA = _get_json_schema('package-schema.json')
