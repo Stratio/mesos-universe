@@ -4,7 +4,7 @@
 
 * Pending changelog
 
-## 0.3.0 (upcoming)
+## 0.3.0 (February 21, 2017)
 
 * confluent-rest-proxy
 
