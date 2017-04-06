@@ -2,7 +2,9 @@
 
 ## 0.4.0 (upcoming)
 
-* Pending changelog
+* Mustache checker
+* Get out of DCOS node
+* Clean packages to go to offline universe
 
 ## 0.3.0 (February 21, 2017)
 
