@@ -10,6 +10,9 @@ clean:
 compile:
 	cd scripts && ./build.sh
 
+test:
+	bin/test.sh
+
 package:
 	bin/packages.sh
 

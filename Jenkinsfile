@@ -3,11 +3,11 @@
 hose {
     EMAIL = 'qa'
     MODULE = 'mesos-universe'
-    REPOSITORY = 'mesos-universe'
+    REPOSITORY = 'github.com/mesos-universe'
     SLACKTEAM = 'stratiopaas'
     BUILDTOOL = 'make'
     DEVTIMEOUT = 30
-    AGENT = 'DCOS'
+    RELEASETIMEOUT = 120 
 
     DEV = { config ->        
         doCompile(config)

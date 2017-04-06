@@ -66,7 +66,7 @@ def main():
 
     package_names = [name for name in args.include.split(',') if name != '']
 
-    with tempfile.TemporaryDirectory() as dir_path, \
+    with pathlib.Path(os.getcwd()) as dir_path, \
             run_docker_registry(dir_path / pathlib.Path("registry")):
 
         http_artifacts = dir_path / pathlib.Path("http")
@@ -234,9 +234,9 @@ def build_universe_docker(dir_path):
     print('Building the universe docker container')
     current_dir = pathlib.Path(
         os.path.dirname(os.path.realpath(__file__)))
-    shutil.copyfile(
-        str(current_dir / '..' / 'docker' / 'local-universe' / 'Dockerfile'),
-        str(dir_path / 'Dockerfile'))
+    #shutil.copyfile(
+    #    str(current_dir / '..' / 'docker' / 'local-universe' / 'Dockerfile'),
+    #    str(dir_path / 'Dockerfile'))
 
     command = [ 'docker', 'build', '-t',
         'mesosphere/universe:{:.0f}'.format(time.time()),
