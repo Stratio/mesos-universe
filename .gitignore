@@ -8,3 +8,8 @@ tmp/
 repo/packages/T/tests
 
 config-reference.md
+
+docker/local-universe/http/
+docker/local-universe/local-universe-*.tar.gz
+docker/local-universe/registry/
+docker/local-universe/universe/
