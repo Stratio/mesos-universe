@@ -19,23 +19,36 @@ if [[ ${JOB_NAME} == Release* ]]; then
 
 	# Rename offline universe to add version
 	mv local-universe.tar.gz local-universe-${VERSION}.tar.gz
+	sudo chmod 777 local-universe-${VERSION}.tar.gz
 
 	# Remove universe directory
-	sudo rm -Rf universe
+	sudo rm -Rf universe http registry
 
 	# Modify to create consul universe
 	echo "---> Modifying scripts for consul offline universe generation"
-	cd ../../..
+	cd ../..
 	bin/modify_universe_source.sh universe.service.consul consul
 
 	# Create consul offline universe
 	echo "---> Creating consul offline universe"
 	cd docker/local-universe && sudo DOCKER_HOST="jenkins.stratio.com:12375" make base && sudo DOCKER_HOST="jenkins.stratio.com:12375" make local-universe 2>&1 | tee /tmp/mesos_offline_consul_universe_generation
-	/tmp/mesos_offline_universe_generation
         if [[ ! -z `cat /tmp/mesos_offline_consul_universe_generation | grep "These packages are not included in the image"` ]]; then
                 exit -1
         fi
 
 	# Rename consul offline universe to add version
 	mv local-consul-universe.tar.gz local-consul-universe-${VERSION}.tar.gz
+	sudo chmod 777 local-consul-universe-${VERSION}.tar.gz
+
+	# Modify to original value
+        echo "---> Modifying scripts to original value"
+        cd ../..
+        bin/modify_consul_universe_source.sh master.mesos
+
+	
+	# kill socat connection
+	sudo kill -9 $(pidof socat)
+	
+	# Force successful exit
+	exit 0
 fi

@@ -21,3 +21,6 @@ deploy:
 
 code-quality:
 	echo "Nothing to do here"
+
+offline-universe:
+	bin/offline.sh
