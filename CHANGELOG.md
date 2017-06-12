@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.4.0 (upcoming)
+## 0.4.0 (June 12, 2017)
 
 * Mustache checker
 * Get out of DCOS node
