@@ -11,5 +11,5 @@ if [[ ${JOB_NAME} == Release* ]]; then
 
 	# Upload consul offline universe
 	echo "---> Uploading consul offline universe"
-	cd docker/local-universe && curl -sS -u stratio:${NEXUSPASS} --upload-file local-consul-universe-${VERSION}.tar.gz http://sodio.stratio.com/repository/paas/offline-universe/mesos/
+	curl -sS -u stratio:${NEXUSPASS} --upload-file local-consul-universe-${VERSION}.tar.gz http://sodio.stratio.com/repository/paas/offline-universe/mesos/
 fi
