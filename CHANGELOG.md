@@ -4,7 +4,7 @@
 
 * Pending changelog
 
-## 0.5.0 (upcoming)
+## 0.5.0 (August 08, 2017)
 
 * Remove exhibitor from offline universe generation
 
