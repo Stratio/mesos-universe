@@ -17,6 +17,6 @@ clean:
 local-universe: clean
 	python3 $(REPO_BASE_DIR)/scripts/local-universe.py			\
 		--repository $(REPO_BASE_DIR)/repo/packages/	\
-		--include="exhibitor,marathon-lb,confluent-connect,confluent-rest-proxy" &&	\
+		--include="marathon-lb,confluent-connect,confluent-rest-proxy" &&	\
 	docker save -o local-universe.tar mesosphere/universe:latest &&		\
 	gzip local-universe.tar
