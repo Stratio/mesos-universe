@@ -2,7 +2,7 @@
 
 ## 0.5.0 (upcoming)
 
-* Pending changelog
+* Remove exhibitor from offline universe generation
 
 ## 0.4.0 (June 12, 2017)
 
